@@ -8,10 +8,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int itemSelecionado = 0;
+		int option = 0;
 		Registro registro = new Registro();
 		Scanner scanner = new Scanner(System.in);
-		while (itemSelecionado != 5) {
+		while (option != 5) {
 			System.out.println("*************************");
 			System.out.println("1 - Inserir novo registro");
 			System.out.println("2 - Exibir registros salvos");
@@ -19,8 +19,8 @@ public class Main {
 			System.out.println("4 - Excluir um registro");
 			System.out.println("5 - Finalizar o programa");
 			System.out.println("*************************\n");
-			itemSelecionado = scanner.nextInt();
-			switch (itemSelecionado) {
+			option = scanner.nextInt();
+			switch (option) {
 			case 1:
 				try {
 					registro.save();

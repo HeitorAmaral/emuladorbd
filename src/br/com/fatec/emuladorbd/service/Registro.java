@@ -10,16 +10,11 @@ import br.com.fatec.emuladorbd.domain.Time;
 
 public class Registro {
 
-	Boolean adicionarJogador = true;
-	Boolean adicionarHabilidade = true;
-	/*
-	 * int contador = 0;
-	 */
 	Scanner scanner = new Scanner(System.in);
 
 	public void save() {
 		Time time = new Time();
-		List<Jogador> listJogadores = new ArrayList();
+		List<Jogador> listJogadores = new ArrayList<Jogador>();
 
 		System.out.println("Insira o nome do time que deseja inserir (No máximo 50 caracteres):");
 		time.setNome(scanner.nextLine());
@@ -29,7 +24,7 @@ public class Registro {
 		String option = "";
 		while (!option.equalsIgnoreCase("N")) {
 			Jogador jogador = new Jogador();
-			List<Habilidade> listHabilidades = new ArrayList();
+			List<Habilidade> listHabilidades = new ArrayList<Habilidade>();
 
 			System.out.println("Insira o nome do jogador do time (No máximo 30 caracteres):");
 			jogador.setNome(scanner.nextLine());
